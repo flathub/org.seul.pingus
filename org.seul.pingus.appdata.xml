@@ -8,6 +8,8 @@ SentUpstream: 2014-09-25
   <id type="desktop">org.seul.pingus.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Free version of Lemmings Puzzle Game</summary>
+  <summary xml:lang="pt_BR">Jogo divertido em vários níveis protagonizado por pinguins</summary>
+  <summary xml:lang="es"Salva a tus amigos pingüinos de el agua helado</summary>
   <description>
     <p>
       Pingus is a Puzzle game where you need to save all your little penguins
@@ -19,6 +21,8 @@ SentUpstream: 2014-09-25
       stuff like a world map and some very cool secret levels.
     </p>
   </description>
+  <description xml:lang="pt_BR"><p>Os pinguins são uma fofura, quem não iria querer participar de um jogo divertido onde você deve protegê-los para que não caiam de penhascos em águas congelantes? Com inúmeros níveis e personagens adoráveis, este com certeza se tornará o seu jogo favorito. Observe os pinguins usarem as ferramentas que você deu à eles para evitar um final inesperado.</p></description>
+  <description xml:lang="es"><p>Los pingüinos están entre los animales más lindos, así que ¿quién no quisiera jugar un juego divertido que protege a estas criaturas para que no se caigan a las aguas heladas? Con una gran cantidad de niveles y personajes adorables, este juego seguramente se convertirá en tu nuevo juego favorito. Observa a tus pingüinos utilizar las herramientas que les das para evitar un final prematuro.</p></description>
   <url type="homepage">http://pingus.seul.org/</url>
   <screenshots>
     <screenshot type="default">http://pingus.seul.org/images/screen_0.7.0-4.jpg</screenshot>
