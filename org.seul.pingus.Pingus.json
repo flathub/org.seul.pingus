@@ -13,12 +13,6 @@
         "--socket=pulseaudio",
         "--socket=wayland"
     ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/share/man",
-        "*.la", "*.a"
-    ],
     "modules": [
         {
             "name": "jsoncpp",
