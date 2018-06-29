@@ -3,6 +3,9 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "1.6",
     "sdk": "org.freedesktop.Sdk",
+    "rename-icon": "pingus",
+    "rename-desktop-file": "pingus.desktop",
+    "rename-appdata-file": "pingus.appdata.xml",
     "finish-args": [
         "--device=all",
         "--share=ipc",
@@ -10,7 +13,6 @@
         "--socket=pulseaudio",
         "--socket=wayland"
     ],
-    "rename-icon": "pingus",
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -56,10 +58,7 @@
             "name": "pingus",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DCMAKE_INSTALL_BINDIR:PATH=/app/bin",
-                "-DCMAKE_INSTALL_DATADIR:PATH=/app/share",
-                "-DCMAKE_INSTALL_LIBEXECDIR:PATH=/app/libexec",
-                "-DCMAKE_INSTALL_MANDIR:PATH=/app/share/man"
+                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
             ],
             "sources": [
                 {
@@ -67,16 +66,6 @@
                     "url": "https://gitlab.com/pingus/pingus.git",
                     "branch": "master"
                 }
-            ],
-            "post-install": [
-                "mkdir -p /app/share/appdata",
-                "cp org.seul.pingus.appdata.xml /app/share/appdata",
-                "mkdir -p /app/share/applications",
-                "cp org.seul.pingus.desktop /app/share/applications",
-                "mkdir -p /app/share/icons/hicolor/scalable/apps",
-                "cp data/images/icons/pingus.svg /app/share/icons/hicolor/scalable/apps",
-                "mkdir -p /app/share/icons/hicolor/32x32/apps",
-                "cp data/images/icons/pingus.png /app/share/icons/hicolor/32x32/apps"
             ]
         }
     ]
