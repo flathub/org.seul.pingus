@@ -35,22 +35,21 @@
         },
         {
             "name": "boost",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./bootstrap.sh --prefix=/app --with-libraries=system,filesystem,signals",
+                "./b2 install"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.63.0/boost_1_63_0.tar.bz2",
-                    "sha256": "beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0"
-                },
-                {
-                    "type": "script",
-                    "commands": ["./bootstrap.sh --prefix=/app --with-libraries=filesystem,system,signals"],
-                    "dest-filename": "configure"
-                },
-                {
-                    "type": "file",
-                    "path": "boost-Makefile",
-                    "dest-filename": "Makefile"
+                    "url": "https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.bz2",
+                    "sha256": "5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9"
                 }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.a"
             ]
         },
         {
