@@ -64,16 +64,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://github.com/Pingus/pingus.git",
-                    "branch": "06afdabb6b27c1314bb1d90a05d467697b72be58"
-                },
-                {
-                    "type": "file",
-                    "path": "org.seul.pingus.appdata.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "org.seul.pingus.desktop"
+                    "url": "https://gitlab.com/pingus/pingus.git",
+                    "branch": "master"
                 }
             ],
             "post-install": [
