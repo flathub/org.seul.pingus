@@ -18,6 +18,7 @@
             "name": "jsoncpp",
             "buildsystem": "cmake",
             "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_INSTALL_PREFIX:PATH=/app"
             ],
             "sources": [
@@ -56,6 +57,7 @@
             "name": "pingus",
             "buildsystem": "cmake",
             "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_INSTALL_PREFIX:PATH=/app"
             ],
             "sources": [
