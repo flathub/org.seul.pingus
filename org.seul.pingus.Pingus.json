@@ -24,15 +24,19 @@
             "name": "jsoncpp",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DCMAKE_INSTALL_INCLUDEDIR:PATH=/app/include",
-                "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib"
+                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/open-source-parsers/jsoncpp/archive/1.8.0.tar.gz",
-                    "sha256": "5deb2462cbf0c0121c9d6c9823ec72fe71417e34242e3509bc7c003d526465bc"
+                    "url": "https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz",
+                    "sha256": "c49deac9e0933bcb7044f08516861a2d560988540b23de2ac1ad443b219afdb6"
                 }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.a",
+                "/lib/pkgconfig"
             ]
         },
         {
