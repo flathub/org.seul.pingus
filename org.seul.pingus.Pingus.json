@@ -64,7 +64,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/pingus/pingus.git",
-                    "branch": "master"
+                    "commit": "a0607f87c5950fe88ae98e55fba2b75f01d14545"
                 }
             ]
         }
