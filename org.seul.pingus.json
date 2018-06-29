@@ -16,7 +16,7 @@
     "modules": [
         {
             "name": "jsoncpp",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_INSTALL_PREFIX:PATH=/app"
@@ -55,7 +55,7 @@
         },
         {
             "name": "pingus",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_INSTALL_PREFIX:PATH=/app"
