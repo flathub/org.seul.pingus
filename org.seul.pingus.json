@@ -1,7 +1,7 @@
 {
     "app-id": "org.seul.pingus",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "19.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-icon": "pingus",
     "rename-desktop-file": "pingus.desktop",
