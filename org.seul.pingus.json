@@ -29,7 +29,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/pingus/pingus.git",
-                    "commit": "18a3d86224b2616ba6f698d53ff5d62605a00857"
+                    "commit": "4e6ea0efc08f9bcf80cb63f74d72c3f99a83dfba"
 		}
             ]
         }
