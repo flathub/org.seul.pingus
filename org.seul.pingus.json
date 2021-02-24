@@ -14,45 +14,10 @@
         "--socket=wayland"
     ],
     "modules": [
-        {
-            "name": "jsoncpp",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz",
-                    "sha256": "c49deac9e0933bcb7044f08516861a2d560988540b23de2ac1ad443b219afdb6"
-                }
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/*.a",
-                "/lib/pkgconfig"
-            ]
-        },
-        {
-            "name": "boost",
-            "buildsystem": "simple",
-            "build-commands": [
-                "./bootstrap.sh --prefix=/app --with-libraries=system,filesystem,signals",
-                "./b2 install"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.bz2",
-                    "sha256": "5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9"
-                }
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/*.a"
-            ]
-        },
+        "shared-modules/sigc++/sigc++-2.0.json",
+        "shared-modules/fmt/fmt.json",
+        "shared-modules/jsoncpp/jsoncpp-1.8.json",
+        "shared-modules/glm/glm.json",
         {
             "name": "pingus",
             "buildsystem": "cmake-ninja",
@@ -64,8 +29,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/pingus/pingus.git",
-                    "commit": "a0607f87c5950fe88ae98e55fba2b75f01d14545"
-                }
+                    "commit": "18a3d86224b2616ba6f698d53ff5d62605a00857"
+		}
             ]
         }
     ]
