@@ -32,7 +32,7 @@
                     "type": "git",
                     "disable-shallow-clone": true,
                     "url": "https://gitlab.com/pingus/pingus.git",
-                    "branch": "master"
+                    "commit": "e6b6a7a33fbf5c401fb3b65bfa57c8bfe40a3e01"
 		},
                 {
                     "type": "shell",
