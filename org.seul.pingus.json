@@ -3,6 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
+    "command": "pingus",
     "rename-icon": "pingus",
     "rename-desktop-file": "pingus.desktop",
     "rename-appdata-file": "pingus.appdata.xml",
@@ -24,8 +25,7 @@
             "name": "pingus",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
@@ -33,7 +33,7 @@
                     "disable-shallow-clone": true,
                     "url": "https://gitlab.com/pingus/pingus.git",
                     "commit": "25d7f3ffbb6ed31de5da7b8da8f9c5fdef75b4f0"
-		},
+                },
                 {
                     "type": "shell",
                     "commands": ["sed -i 's|org.seul.pingus.Pingus|org.seul.pingus|' pingus.appdata.xml.in"]
