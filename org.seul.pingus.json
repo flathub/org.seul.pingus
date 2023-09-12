@@ -3,6 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "20.08",
     "sdk": "org.freedesktop.Sdk",
+    "command": "pingus",
     "rename-icon": "pingus",
     "rename-desktop-file": "pingus.desktop",
     "rename-appdata-file": "pingus.appdata.xml",
@@ -10,8 +11,7 @@
         "--device=all",
         "--share=ipc",
         "--socket=x11",
-        "--socket=pulseaudio",
-        "--socket=wayland"
+        "--socket=pulseaudio"
     ],
     "modules": [
         "shared-modules/sigc++/sigc++-2.0.json",
@@ -40,7 +40,25 @@
                 "/share"
             ]
         },
-        "shared-modules/jsoncpp/jsoncpp-1.8.json",
+        {
+            "name": "jsoncpp",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz",
+                    "sha256": "c49deac9e0933bcb7044f08516861a2d560988540b23de2ac1ad443b219afdb6"
+                }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.a",
+                "/lib/pkgconfig"
+            ]
+        },
         "shared-modules/glm/glm.json",
         "shared-modules/libmodplug/libmodplug.json",
         "shared-modules/mpg123/mpg123.json",
@@ -48,8 +66,7 @@
             "name": "pingus",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX:PATH=/app"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
                 {
