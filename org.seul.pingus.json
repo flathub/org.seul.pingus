@@ -1,7 +1,7 @@
 {
     "app-id": "org.seul.pingus",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "pingus",
     "rename-icon": "pingus",
@@ -35,8 +35,16 @@
                     "commit": "25d7f3ffbb6ed31de5da7b8da8f9c5fdef75b4f0"
                 },
                 {
+                    "type": "patch",
+                    "path": "missing-includes.patch"
+                },
+                {
                     "type": "shell",
                     "commands": ["sed -i 's|org.seul.pingus.Pingus|org.seul.pingus|' pingus.appdata.xml.in"]
+                },
+                {
+                    "type": "shell",
+                    "commands": ["sed -i \"20i #include <vector>\" ./external/strutcpp/include/strut/split.hpp"]
                 }
             ]
         }

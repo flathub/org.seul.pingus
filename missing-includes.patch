@@ -1,0 +1,139 @@
+From 71eba5c5cb253f15a64e271028fa5ec91adc1e6a Mon Sep 17 00:00:00 2001
+From: Ingo Ruhnke <grumbel@gmail.com>
+Date: Fri, 24 Mar 2023 00:04:33 +0100
+Subject: [PATCH] Fix missing <functional> includes
+
+---
+ src/editor/editor_screen.cpp       | 1 +
+ src/editor/file_dialog.cpp         | 2 ++
+ src/editor/level_properties.cpp    | 2 ++
+ src/editor/message_box.cpp         | 2 ++
+ src/editor/object_properties.cpp   | 2 ++
+ src/editor/object_selector.cpp     | 2 ++
+ src/editor/viewport.cpp            | 2 ++
+ src/pingus/screens/level_menu.cpp  | 4 ++--
+ src/pingus/screens/option_menu.cpp | 1 +
+ 9 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/src/editor/editor_screen.cpp b/src/editor/editor_screen.cpp
+index 206e985a3..b2526c4e3 100644
+--- a/src/editor/editor_screen.cpp
++++ b/src/editor/editor_screen.cpp
+@@ -17,6 +17,7 @@
+ 
+ #include "editor/editor_screen.hpp"
+ 
++#include <functional>
+ #include <sstream>
+ 
+ #include <logmich/log.hpp>
+diff --git a/src/editor/file_dialog.cpp b/src/editor/file_dialog.cpp
+index ed3c56d0f..39838ca3b 100644
+--- a/src/editor/file_dialog.cpp
++++ b/src/editor/file_dialog.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "editor/file_dialog.hpp"
+ 
++#include <functional>
++
+ #include <logmich/log.hpp>
+ 
+ #include "editor/button.hpp"
+diff --git a/src/editor/level_properties.cpp b/src/editor/level_properties.cpp
+index 11999a0d6..14f9c14e4 100644
+--- a/src/editor/level_properties.cpp
++++ b/src/editor/level_properties.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "editor/level_properties.hpp"
+ 
++#include <functional>
++
+ #include <logmich/log.hpp>
+ #include <strut/from_string.hpp>
+ #include <strut/to_string.hpp>
+diff --git a/src/editor/message_box.cpp b/src/editor/message_box.cpp
+index 5a8c6351f..a4fcb31e0 100644
+--- a/src/editor/message_box.cpp
++++ b/src/editor/message_box.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "editor/message_box.hpp"
+ 
++#include <functional>
++
+ #include "editor/gui_style.hpp"
+ #include "pingus/gettext.h"
+ #include "pingus/fonts.hpp"
+diff --git a/src/editor/object_properties.cpp b/src/editor/object_properties.cpp
+index 49737d528..23fbe1999 100644
+--- a/src/editor/object_properties.cpp
++++ b/src/editor/object_properties.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "editor/object_properties.hpp"
+ 
++#include <functional>
++
+ #include <logmich/log.hpp>
+ #include <strut/from_string.hpp>
+ #include <strut/to_string.hpp>
+diff --git a/src/editor/object_selector.cpp b/src/editor/object_selector.cpp
+index 306ddf5c6..812e9ea92 100644
+--- a/src/editor/object_selector.cpp
++++ b/src/editor/object_selector.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "editor/object_selector.hpp"
+ 
++#include <functional>
++
+ #include <sigc++/signal.h>
+ 
+ #include "editor/generic_level_obj.hpp"
+diff --git a/src/editor/viewport.cpp b/src/editor/viewport.cpp
+index 90bcf9b31..d31ac3a31 100644
+--- a/src/editor/viewport.cpp
++++ b/src/editor/viewport.cpp
+@@ -17,6 +17,8 @@
+ 
+ #include "editor/viewport.hpp"
+ 
++#include <functional>
++
+ #include <logmich/log.hpp>
+ 
+ #include "editor/editor_level.hpp"
+diff --git a/src/pingus/screens/level_menu.cpp b/src/pingus/screens/level_menu.cpp
+index defd91567..a88861325 100644
+--- a/src/pingus/screens/level_menu.cpp
++++ b/src/pingus/screens/level_menu.cpp
+@@ -16,10 +16,10 @@
+ 
+ #include "pingus/screens/level_menu.hpp"
+ 
+-#include <fmt/format.h>
+-
++#include <functional>
+ #include <utility>
+ 
++#include <fmt/format.h>
+ #include <logmich/log.hpp>
+ 
+ #include "engine/display/display.hpp"
+diff --git a/src/pingus/screens/option_menu.cpp b/src/pingus/screens/option_menu.cpp
+index 8db507e4b..072b14729 100644
+--- a/src/pingus/screens/option_menu.cpp
++++ b/src/pingus/screens/option_menu.cpp
+@@ -16,6 +16,7 @@
+ 
+ #include "pingus/screens/option_menu.hpp"
+ 
++#include <functional>
+ #include <sstream>
+ 
+ #include <logmich/log.hpp>
+-- 
+GitLab
+
