@@ -14,14 +14,40 @@
         "--socket=pulseaudio"
     ],
     "modules": [
-        "shared-modules/sigc++/sigc++-2.0.json",
+           {
+      "name" : "sigc++",
+        "config-opts" : [
+            "--disable-documentation"
+        ],
+        "sources" : [
+            {
+            "url" : "http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.10/libsigc++-2.10.2.tar.xz",
+            "sha256" : "b1ca0253379596f9c19f070c83d362b12dfd39c0a3ea1dd813e8e21c1a097a98",
+            "type" : "archive"
+            }
+        ],
+        "cleanup" : [
+            "*.a",
+            "*.la",
+            "/include",
+            "/lib/sigc++-2.0",
+            "/lib/pkgconfig"
+        ]
+        },
         {
             "name": "fmt",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/archive/6.1.2.tar.gz",
-                    "sha256": "1cafc80701b746085dddf41bd9193e6d35089e1c6ec1940e037fcb9c98f62365"
+                    "archive-type": "tar-gzip",
+                    "url": "https://api.github.com/repos/fmtlib/fmt/tarball/10.1.1",
+                    "sha256": "33abe9c80da9be2fcfcc9c501e1d4907eb513826594add1824495fc521993390",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/fmtlib/fmt/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".tarball_url"
+                    }
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -59,9 +85,64 @@
                 "/lib/pkgconfig"
             ]
         },
-        "shared-modules/glm/glm.json",
-        "shared-modules/libmodplug/libmodplug.json",
-        "shared-modules/mpg123/mpg123.json",
+            {
+      "name" : "glm",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "url" : "https://github.com/g-truc/glm.git",
+          "commit" : "bf71a834948186f4097caa076cd2663c69a10e1e",
+          "type" : "git"
+        }
+      ],
+      "cleanup" : [
+        "/include",
+        "/lib/cmake"
+      ],
+      "build-commands" : [
+        "cp -vr glm /app/include/",
+        "rm -v /app/include/glm/CMakeLists.txt",
+        "cp -vr cmake/ /app/lib/"
+      ]
+    },
+    {
+      "name" : "libmodplug",
+      "config-opts" : [],
+      "sources" : [
+        {
+          "url" : "http://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.8.5/libmodplug-0.8.8.5.tar.gz",
+          "sha256" : "77462d12ee99476c8645cb5511363e3906b88b33a6b54362b4dbc0f39aa2daad",
+          "type" : "archive"
+        }
+      ],
+      "cleanup" : [
+        "*.a",
+        "*.la",
+        "/include",
+        "/lib/pkgconfig"
+      ]
+    },
+    {
+      "name" : "mpg123",
+      "config-opts" : [],
+      "sources" : [
+        {
+          "url" : "https://sourceforge.net/projects/mpg123/files/mpg123/1.26.5/mpg123-1.26.5.tar.bz2",
+          "sha256" : "502a97e0d935be7e37d987338021d8f301bae35c2884f2a83d59c4b52466ef06",
+          "type" : "archive"
+        }
+      ],
+      "cleanup" : [
+        "*.a",
+        "*.la",
+        "/bin/mpg123",
+        "/bin/mpg123-id3dump",
+        "/bin/mpg123-strip",
+        "/bin/out123",
+        "/include",
+        "/lib/pkgconfig"
+      ]
+    },
         {
             "name": "pingus",
             "buildsystem": "cmake-ninja",
@@ -69,16 +150,7 @@
                 "-DCMAKE_BUILD_TYPE=Release"
             ],
             "sources": [
-                {
-                    "type": "git",
-                    "disable-shallow-clone": true,
-                    "url": "https://gitlab.com/pingus/pingus.git",
-                    "commit": "25d7f3ffbb6ed31de5da7b8da8f9c5fdef75b4f0"
-		},
-                {
-                    "type": "shell",
-                    "commands": ["sed -i 's|org.seul.pingus.Pingus|org.seul.pingus|' pingus.appdata.xml.in"]
-                }
+                "sources.json"
             ]
         }
     ]
