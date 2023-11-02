@@ -112,14 +112,14 @@
         "url": "https://github.com/grumbel/strutcpp.git",
         "commit": "7bf070c08e4234cd51426b6f319fa474692f9ef4",
         "disable-submodules": true,
-        "dest": "external/strutcpp"
+        "dest": "external/strut"
     },
     {
         "type": "git",
         "url": "https://github.com/grumbel/tinycmmc.git",
         "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
         "disable-submodules": true,
-        "dest": "external/strutcpp/external/tinycmmc"
+        "dest": "external/strut/external/tinycmmc"
     },
     {
         "type": "git",
