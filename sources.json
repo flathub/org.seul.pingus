@@ -1,0 +1,180 @@
+[
+    {
+        "type": "git",
+        "url": "https://github.com/Pingus/pingus.git",
+        "commit": "0af3c96a7faddd3cd2d652005d669037da9e2ee4",
+        "disable-submodules": true
+    },
+    {
+        "type": "file",
+        "path": "org.seul.pingus.metainfo.xml"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/argpp.git",
+        "commit": "9e1d54f8ed20af0aa5857e6653ab605b2ab63d5c",
+        "disable-submodules": true,
+        "dest": "external/argpp"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/argpp/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/geomcpp.git",
+        "commit": "6fd6402a02275e8f2ac250a84900843e56aaf04e",
+        "disable-submodules": true,
+        "dest": "external/geom"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/geom/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/logmich/logmich.git",
+        "commit": "5924b2beabd2169a077ae57401bdd3cd8ebfba7d",
+        "disable-submodules": true,
+        "dest": "external/logmich"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/logmich/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/priocpp.git",
+        "commit": "701a4c7ae9a100c4752ddf6ef8cbebf2ae39156b",
+        "disable-submodules": true,
+        "dest": "external/prio"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/logmich/logmich.git",
+        "commit": "5924b2beabd2169a077ae57401bdd3cd8ebfba7d",
+        "disable-submodules": true,
+        "dest": "external/prio/external/logmich"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/prio/external/logmich/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/lispparser/sexp-cpp.git",
+        "commit": "34f5a52d0e935da03c691efa7944f420ada7e195",
+        "disable-submodules": true,
+        "dest": "external/prio/external/sexp-cpp"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/prio/external/sexp-cpp/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/prio/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/lispparser/sexp-cpp.git",
+        "commit": "34f5a52d0e935da03c691efa7944f420ada7e195",
+        "disable-submodules": true,
+        "dest": "external/sexp-cpp"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/sexp-cpp/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/strutcpp.git",
+        "commit": "7bf070c08e4234cd51426b6f319fa474692f9ef4",
+        "disable-submodules": true,
+        "dest": "external/strut"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/strut/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/tinygettext/tinygettext.git",
+        "commit": "eb077671ef7849e3d7884cbb1544ce195ab269d9",
+        "disable-submodules": true,
+        "dest": "external/tinygettext"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/tinygettext/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/uitest.git",
+        "commit": "c436b1b990a94d2d989966013e602fd8a621e43d",
+        "disable-submodules": true,
+        "dest": "external/uitest"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/uitest/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/WindstilleTeam/wstsound.git",
+        "commit": "02175efb729fd95a8e8fa4432e186c37171b5c75",
+        "disable-submodules": true,
+        "dest": "external/wstsound"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/tinycmmc.git",
+        "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
+        "disable-submodules": true,
+        "dest": "external/wstsound/external/tinycmmc"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/grumbel/xdgcpp.git",
+        "commit": "7776bc77ad59a8e9b3ea7a30e87bcc7fa7efc31e",
+        "disable-submodules": true,
+        "dest": "external/xdgcpp"
+    }
+]

@@ -1,12 +1,11 @@
 {
     "app-id": "org.seul.pingus",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "pingus",
     "rename-icon": "pingus",
     "rename-desktop-file": "pingus.desktop",
-    "rename-appdata-file": "pingus.appdata.xml",
     "finish-args": [
         "--device=all",
         "--share=ipc",
@@ -14,14 +13,31 @@
         "--socket=pulseaudio"
     ],
     "modules": [
-        "shared-modules/sigc++/sigc++-2.0.json",
+        {
+            "name": "sigc++-2.0",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsigc++/2.12/libsigc%2B%2B-2.12.1.tar.xz",
+                    "sha256": "a9dbee323351d109b7aee074a9cb89ca3e7bcf8ad8edef1851f4cf359bd50843"
+                }
+            ],
+            "cleanup" : [
+                "*.a",
+                "*.la",
+                "/include",
+                "/lib/sigc++-2.0",
+                "/lib/pkgconfig"
+            ]
+        },
         {
             "name": "fmt",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/archive/6.1.2.tar.gz",
-                    "sha256": "1cafc80701b746085dddf41bd9193e6d35089e1c6ec1940e037fcb9c98f62365"
+                    "url": "https://github.com/fmtlib/fmt/archive/8.1.1.tar.gz",
+                    "sha256": "3d794d3cf67633b34b2771eb9f073bde87e846e0d395d254df7b211ef1ec7346"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -59,11 +75,8 @@
                 "/lib/pkgconfig"
             ]
         },
-        "shared-modules/glm/glm.json",
-        "shared-modules/libmodplug/libmodplug.json",
-        "shared-modules/mpg123/mpg123.json",
         {
-            "name": "pingus",
+            "name": "glm",
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release"
@@ -71,14 +84,62 @@
             "sources": [
                 {
                     "type": "git",
-                    "disable-shallow-clone": true,
-                    "url": "https://gitlab.com/pingus/pingus.git",
-                    "commit": "25d7f3ffbb6ed31de5da7b8da8f9c5fdef75b4f0"
-		},
-                {
-                    "type": "shell",
-                    "commands": ["sed -i 's|org.seul.pingus.Pingus|org.seul.pingus|' pingus.appdata.xml.in"]
+                    "url": "https://github.com/g-truc/glm.git",
+                    "commit": "47585fde0c49fa77a2bf2fb1d2ead06999fd4b6e"
                 }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/cmake"
+            ]
+        },
+        {
+            "name": "libmodplug",
+            "sources": [
+                {
+                "type": "archive",
+                "url": "http://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.8.5/libmodplug-0.8.8.5.tar.gz",
+                "sha256": "77462d12ee99476c8645cb5511363e3906b88b33a6b54362b4dbc0f39aa2daad"
+                }
+            ],
+            "cleanup": [
+                "*.a",
+                "*.la",
+                "/include",
+                "/lib/pkgconfig"
+            ]
+        },
+        {
+            "name": "mpg123",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/mpg123/files/mpg123/1.26.5/mpg123-1.26.5.tar.bz2",
+                    "sha256": "502a97e0d935be7e37d987338021d8f301bae35c2884f2a83d59c4b52466ef06"
+                }
+            ],
+            "cleanup": [
+                "*.a",
+                "*.la",
+                "/bin/mpg123",
+                "/bin/mpg123-id3dump",
+                "/bin/mpg123-strip",
+                "/bin/out123",
+                "/include",
+                "/lib/pkgconfig"
+            ]
+        },
+        {
+            "name": "pingus",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "sources": [
+                "sources.json"
+            ],
+            "post-install": [
+                "install -Dm644 org.seul.pingus.metainfo.xml /app/share/metainfo/org.seul.pingus.metainfo.xml"
             ]
         }
     ]
