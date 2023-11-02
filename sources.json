@@ -77,14 +77,14 @@
         "url": "https://github.com/lispparser/sexp-cpp.git",
         "commit": "34f5a52d0e935da03c691efa7944f420ada7e195",
         "disable-submodules": true,
-        "dest": "external/prio/external/sexpcpp"
+        "dest": "external/prio/external/sexp-cpp"
     },
     {
         "type": "git",
         "url": "https://github.com/grumbel/tinycmmc.git",
         "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
         "disable-submodules": true,
-        "dest": "external/prio/external/sexpcpp/external/tinycmmc"
+        "dest": "external/prio/external/sexp-cpp/external/tinycmmc"
     },
     {
         "type": "git",
@@ -98,14 +98,14 @@
         "url": "https://github.com/lispparser/sexp-cpp.git",
         "commit": "34f5a52d0e935da03c691efa7944f420ada7e195",
         "disable-submodules": true,
-        "dest": "external/sexpcpp"
+        "dest": "external/sexp-cpp"
     },
     {
         "type": "git",
         "url": "https://github.com/grumbel/tinycmmc.git",
         "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
         "disable-submodules": true,
-        "dest": "external/sexpcpp/external/tinycmmc"
+        "dest": "external/sexp-cpp/external/tinycmmc"
     },
     {
         "type": "git",
