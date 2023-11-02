@@ -28,14 +28,14 @@
         "url": "https://github.com/grumbel/geomcpp.git",
         "commit": "6fd6402a02275e8f2ac250a84900843e56aaf04e",
         "disable-submodules": true,
-        "dest": "external/geomcpp"
+        "dest": "external/geom"
     },
     {
         "type": "git",
         "url": "https://github.com/grumbel/tinycmmc.git",
         "commit": "01fe277570a290837726de6eb3c16d617bfda28c",
         "disable-submodules": true,
-        "dest": "external/geomcpp/external/tinycmmc"
+        "dest": "external/geom/external/tinycmmc"
     },
     {
         "type": "git",
